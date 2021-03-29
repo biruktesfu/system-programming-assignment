@@ -1,91 +1,105 @@
 #include <stdio.h>
 
 int main(){
-    printf("choose from the following\n\n");
+    puts("------------------");
+    puts("Simple Calculator");
+    puts("------------------");
+    int choose = 0;
+    while (choose != 5){
+        printf("\n\n");
+        puts(" 1. addition        2. multiplication \n 3. subtraction      4. division     5.quit");
 
-    puts("1. addition        2. multiplication \n 3. subtraction      4. division");
+        printf("\n");
+        printf("choose from the above: ");
+        scanf("%d", &choose);
 
-    int choose;
-    printf("\nchoose from the above: ");
-    scanf("%d", &choose);
+        printf("\n");
 
-    if (choose == 1){
+        if (choose == 1){
 
-        int wanted;
-        printf("how many numbers do you want to add: ");
-        scanf("%d", &wanted);
+            int wanted;
+            printf("how many numbers do you want to add: ");
+            scanf("%d", &wanted);
 
-        int count = 0;
-        int added = 0;
-        puts("\n enter the numbers that you want to add below");
-        while (count < wanted){
-            int number = 0;
+            printf("\n");
 
-            printf(">");
-            scanf("%d", &number);
-            
-            added += number;
-            count += 1;
+            int count = 0;
+            int added = 0;
+            puts("enter the numbers that you want to add below");
+            while (count < wanted){
+                int number = 0;
 
-        }
-        printf("the result is %d", added);
+                printf(">");
+                scanf("%d", &number);
+                
+                added += number;
+                count += 1;
 
-    }
-
-    if (choose == 2){
-
-        int wanted;
-        printf("how many numbers do you want to mutiply: ");
-        scanf("%d", &wanted);
-
-        int count = 0;
-        int multiplied = 1;
-        puts("\n enter the numbers that you want to multiply below");
-        while (count < wanted){
-            int number = 0;
-
-            printf(">");
-            scanf("%d", &number);
-            
-            multiplied *= number;
-            count += 1;
+            }
+            printf("the result is %d ", added);
 
         }
-        printf("the result is %d", multiplied);
+
+        if (choose == 2){
+
+            int wanted;
+            printf("how many numbers do you want to mutiply: ");
+            scanf("%d", &wanted);
+
+            printf("\n");
 
 
-    }
+            int count = 0;
+            int multiplied = 1;
+            puts("\n enter the numbers that you want to multiply below");
+            while (count < wanted){
+                int number = 0;
 
-    if (choose == 3){
+                printf(">");
+                scanf("%d", &number);
+                
+                multiplied *= number;
+                count += 1;
 
-        int num1, num2;
+            }
+            printf("\nthe result is %d ", multiplied);
 
-        printf("enter the first number: ");
-        scanf("%d", &num1);
 
-        printf("enter the second number: ");
-        scanf("%d", &num2);
+        }
 
-        int sub = num1 - num2;
+        if (choose == 3){
 
-        printf("\n %d - %d = %d", num1, num2, sub);
+            int num1, num2;
 
-    }
+            printf("enter the first number: ");
+            scanf("%d", &num1);
 
-    if (choose == 4){
+            printf("enter the second number: ");
+            scanf("%d", &num2);
 
-        float num1, num2;
+            int sub = num1 - num2;
 
-        printf("enter the first number: ");
-        scanf("%f", &num1);
+            printf("\n %d - %d = %d", num1, num2, sub);
 
-        printf("enter the second number: ");
-        scanf("%f", &num2);
+        }
 
-        double div = num1 / num2;
+        if (choose == 4){
 
-        printf("\n %f / %f = %f", num1, num2, div);
+            float num1, num2;
 
+            printf("enter the first number: ");
+            scanf("%f", &num1);
+
+            printf("enter the second number: ");
+            scanf("%f", &num2);
+
+            double div = num1 / num2;
+
+            printf("\n %f / %f = %f ", num1, num2, div);
+            continue;
+
+
+        }
     }
 
 }
