@@ -9,10 +9,10 @@ int main(){
     
     int choose = 0;
 
-    while (choose != 6){
+    while (choose != 7){
 
         printf("\n\n");
-        puts(" 1. addition         2. multiplication \n\n 3. subtraction      4. division    \n\n 5.square_root        6.quit");
+        puts(" 1. addition         2. multiplication \n\n 3. subtraction      4. division    \n\n 5. square_root        6. average         \n\n 7. quit");
 
         printf("\n");
         printf("choose from the above: ");
@@ -122,6 +122,37 @@ int main(){
             double square_root = sqrt(number);
 
             printf("\nthe square root of %d is %f", number, square_root);
+
+        }
+
+        if (choose == 6){
+
+            int wanted;
+            printf("caculate average of how many numbers: ");
+            scanf("%d", &wanted);
+
+            printf("\n");
+
+            int count = 0;
+            int added = 0;
+
+            puts("enter the numbers that you want to calculate the average for (hit enter after each input)");
+
+            while (count < wanted){
+                int number = 0;
+
+                printf("> ");
+                scanf("%d", &number);
+                
+                added += number;
+                count += 1;
+
+            }
+            double average;
+
+             average = added / count;
+
+            printf("the average is %f", average);
 
         }
     }
